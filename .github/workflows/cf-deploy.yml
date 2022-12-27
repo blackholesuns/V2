@@ -1,0 +1,72 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - "master"
+jobs:
+  deploy:
+    name: Deploy
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      deployments: write
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build
+        run: pnpm build
+
+      - name: Test
+        run: pnpm test
+
+      - name: Deploy 📦☁️
+        uses: cloudflare/wrangler-action@2.0.0
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_SECRET }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages publish dist --project-name=nmsce-app | tee publish.log
+
+      - name: set DeploymentUrl as Output
+        id: deploy-url
+        run: echo "url=$(cat publish.log | sed -nr "s/✨\sDeployment\scomplete!.+\s(.+)/\1/p")" >> $GITHUB_OUTPUT
+        
+      - name: Status check
+        uses: Sibz/github-status-action@v1.1.6
+        if: steps.deploy-url.outputs.url
+        with:
+          authToken: ${{ secrets.GITHUB_TOKEN }}
+          context: Cloudflare Preview
+          state: success
+          target_url:  ${{ steps.deploy-url.outputs.url }}
+        

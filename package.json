@@ -2,13 +2,15 @@
 	"name": "app",
 	"version": "0.0.1",
 	"private": true,
+	"packageManager": "pnpm@7.20.0",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
-		"test": "playwright test",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"test": "pnpm test:unit",
+		"test:ui": "playwright test",
 		"test:unit": "vitest",
 		"lint": "prettier --plugin-search-dir . --check .",
 		"format": "prettier --plugin-search-dir . --write ."
