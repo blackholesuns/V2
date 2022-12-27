@@ -1,10 +1,22 @@
+# Mac auto generated files
 .DS_Store
+
+# NPM module folder
 node_modules
+
+# Build Directories
 /build
 /.svelte-kit
 /package
+
+#Environent files
 .env
 .env.*
 !.env.example
+
+# Vite Config Backups
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# PNPM specific ignore for devcontainers
+.pnpm-store

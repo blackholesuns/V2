@@ -2,6 +2,7 @@
 import { error } from '@sveltejs/kit';
 import { GetAPIEntry } from '$lib/Firebase/Api';
 
+export const ssr = false;
 // export const hydrate = false;
 // export const router = false;
 

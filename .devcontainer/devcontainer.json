@@ -7,6 +7,7 @@
 	"features": {
 		"ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {},
 		"ghcr.io/devcontainers/features/git:1": {},
+		"ghcr.io/NicoVIII/devcontainer-features/pnpm:2": {},
 	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
