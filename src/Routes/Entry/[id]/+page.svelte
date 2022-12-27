@@ -29,6 +29,8 @@
     {#if !exists}
         <h1>Sorry The Specified Entry does not exist</h1>
     {:else}
+		<h1 class="text-2xl font-semibold m-3">{Name}</h1>
+		<h1 class="text-lg font-semibold m-2">in {System || "Undefined"}</h1>
         <img src="{imageUrl}" alt="{imageUrl}">
     {/if}
 </body>

@@ -4,3 +4,7 @@ export function CapitalizeFirstLetter(value: string, forceLowerCase: boolean = t
 		value = value.toLowerCase();
 	return value.charAt(0).toUpperCase() + value.slice(1);
 }
+
+export function GetEntryUrl(data: any): string {
+	return `/Entry/${data.id}?type=${data.type}&galaxy=${data.galaxy}`
+}
