@@ -61,12 +61,12 @@ jobs:
           # Optional: Enable this if you want to have GitHub Deployments triggered
           # gitHubToken: ${{ secrets.GITHUB_TOKEN }}
  
-      - name: Status check
-        uses: Sibz/github-status-action@v1.1.6
-        if: steps.cf-deploy.outputs.url
-        with:
-          authToken: ${{ secrets.GITHUB_TOKEN }}
-          context: Cloudflare Preview
-          state: success
-          target_url:  ${{ steps.cf-deploy.outputs.url }}
+      # - name: Status check
+      #   uses: Sibz/github-status-action@v1.1.6
+      #   if: steps.cf-deploy.outputs.url
+      #   with:
+      #     authToken: ${{ secrets.GITHUB_TOKEN }}
+      #     context: Cloudflare Preview
+      #     state: success
+      #     target_url:  ${{ steps.cf-deploy.outputs.url }}
         
