@@ -1,4 +1,6 @@
-<div class="mt-12">
-	<h1 class="text-3xl font-bold underline text-center">NMSCE App V2</h1>
-	<p class="text-center">The latest Iteration</p>
+<div class="mt-12 text-center">
+	<h1 class="text-3xl font-bold underline">NMSCE App V2</h1>
+	<p >The latest Iteration</p>
+
+	<a class="text-indigo-600" href="/Entry/c28cfcaf-a8b0-47c0-8a8f-ba3609da332a?galaxy=euclid&type=Ship">Example Entry</a>
 </div>
