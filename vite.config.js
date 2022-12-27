@@ -1,6 +1,8 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import {resolve} from 'path'
 
+console.log(__dirname)
+
 /** @type {import('vite').UserConfig} */
 export default {
 	plugins: [sveltekit()],
