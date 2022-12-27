@@ -51,22 +51,22 @@ jobs:
         run: pnpm test
 
       - name: Deploy 📦☁️
-        uses: cloudflare/wrangler-action@2.0.0
+        id: cf-deploy
+        uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_SECRET }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages publish dist --project-name=nmsce-app | tee publish.log
-
-      - name: set DeploymentUrl as Output
-        id: deploy-url
-        run: echo "url=$(cat publish.log | sed -nr "s/✨\sDeployment\scomplete!.+\s(.+)/\1/p")" >> $GITHUB_OUTPUT
-        
+          projectName: nmsce-app
+          directory: .svelte-kit/cloudflare
+          # Optional: Enable this if you want to have GitHub Deployments triggered
+          # gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+ 
       - name: Status check
         uses: Sibz/github-status-action@v1.1.6
-        if: steps.deploy-url.outputs.url
+        if: steps.cf-deploy.outputs.url
         with:
           authToken: ${{ secrets.GITHUB_TOKEN }}
           context: Cloudflare Preview
           state: success
-          target_url:  ${{ steps.deploy-url.outputs.url }}
+          target_url:  ${{ steps.cf-deploy.outputs.url }}
         
