@@ -8,6 +8,8 @@ jobs:
   deploy:
     name: Deploy
 
+    environment: Development
+
     runs-on: ubuntu-latest
 
     permissions:
@@ -43,6 +45,11 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
+
+      - name: 'Create env file'
+        run: |
+          echo "${{ secrets.ENV_FILE }}" > .env
+
 
       - name: Build
         run: pnpm build
