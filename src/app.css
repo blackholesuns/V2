@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer base {
+	.acryllic {
+		@apply bg-repeat bg-[length:50px_50px] bg-[url("/assets/noise.png")] backdrop-blur-md;
+	}
+}
+
+
+@layer utilities {
+    @variants responsive, hover, focus, active {
+        .text-shadow {
+          text-shadow: 2px 2px 4px black;
+        }
+        .text-shadow-md {
+          text-shadow: 4px 4px 8px black;
+        }
+        .text-shadow-lg {
+          text-shadow: 15px 15px 30px black;
+        }
+        .text-shadow-none {
+          text-shadow: none;
+        }
+    } 
+}
