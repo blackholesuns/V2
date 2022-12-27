@@ -1,3 +1,5 @@
+![Badge](https://github.com/blackholesuns/v2/actions/workflows/cf-deploy.yml/badge.svg)
+
 # No Mans Sky Coordinate Exchange App
 
 This is the source code for the latest iteration of the No Mans Sky Coordinate Exchange app. Its written in Svelte using the Svelte-Kit framework and Typescript. 
