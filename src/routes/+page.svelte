@@ -1,3 +1,8 @@
+<svelte:head>
+	<title>Home</title>
+	<meta name="description" content="No Mans Sky Coordinate Exchange App" />
+</svelte:head>
+
 <div class="mt-12 text-center">
 	<h1 class="text-3xl font-bold underline">NMSCE App V2</h1>
 	<p >The latest Iteration</p>
