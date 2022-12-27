@@ -11,6 +11,23 @@
             "name": "Launch Chrome against localhost",
             "url": "http://localhost:5173",
             "webRoot": "${workspaceFolder}"
-        }
+        },
+		{
+			"name": "Launch Vite DEV server",
+			"request": "launch",
+			"env": {
+				"CI": "1"
+			},
+			"runtimeExecutable": "pnpm",
+			"runtimeArgs": [
+			  "dev",
+			],
+			"type": "node",
+			"serverReadyAction": {
+			  "action": "debugWithChrome",
+			  "pattern": "http:\/\/localhost:([0-9]+)",
+			  "uriFormat": "http://localhost:%s"
+			}
+		},
     ]
 }
