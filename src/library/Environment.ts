@@ -6,7 +6,6 @@ export const IsProduction = import.meta.env.PROD;
 export const IsDevelopment = import.meta.env.DEV;
 
 
-
 // Firebase Config values
 export const FirebaseAPI = import.meta.env.VITE_FIREBASE_API
 export const FirebaseMessageId = import.meta.env.VITE_FIREBASE_MSGID

@@ -1,6 +1,6 @@
 
 import { error } from '@sveltejs/kit';
-import { GetAPIEntry } from '$lib/firebase/api';
+import { GetAPIEntry } from '$lib/Firebase/Api';
 
 // export const hydrate = false;
 // export const router = false;
