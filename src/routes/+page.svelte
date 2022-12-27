@@ -1,3 +1,7 @@
+<script>
+	import("$lib/Environment").then(console.log)
+</script>
+
 <svelte:head>
 	<title>Home</title>
 	<meta name="description" content="No Mans Sky Coordinate Exchange App" />
