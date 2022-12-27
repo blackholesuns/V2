@@ -1,4 +1,4 @@
-import { capitalizeFirstLetter } from "$lib/Util";
+import { CapitalizeFirstLetter } from "$lib/Util";
 import { FirebaseProjectId } from "../Environment";
 
 export const BaseUri = "https://firestore.googleapis.com/v1"
@@ -9,8 +9,8 @@ export const DocumentsUri = `${DatabaseUri}/documents`
 
 export async function GetAPIEntry(type: string, id: string, galaxy = "Euclid") {
 
-	type = capitalizeFirstLetter(type.toLowerCase())
-	galaxy = capitalizeFirstLetter(galaxy.toLowerCase());
+	type = CapitalizeFirstLetter(type.toLowerCase())
+	galaxy = CapitalizeFirstLetter(galaxy.toLowerCase());
 
 	const response = await fetch(`${DocumentsUri}/nmsce/${galaxy}/${type}/${id}`);
 	const result = await response.json();
