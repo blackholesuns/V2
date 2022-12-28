@@ -4,8 +4,8 @@
 
 	import('$lib/Environment').then(console.log);
 
-	// console.log("Querying Documents")
-	const promise = GetLatestEntries();
+	// // console.log("Querying Documents")
+	// const promise = GetLatestEntries();
 </script>
 
 <svelte:head>
@@ -21,7 +21,7 @@
 		href="/Entry/c28cfcaf-a8b0-47c0-8a8f-ba3609da332a?galaxy=euclid&type=Ship">Example Entry</a
 	>
 
-	<div class="flex flex-row flex-wrap w-screen">
+	<!-- <div class="flex flex-row flex-wrap w-screen">
 		{#await promise}
 			<p>...waiting</p>
 		{:then entries}
@@ -31,5 +31,5 @@
 		{:catch error}
 			<p style="color: red">{error.message}</p>
 		{/await}
-	</div>
+	</div> -->
 </div>
