@@ -6,5 +6,5 @@ export function CapitalizeFirstLetter(value: string, forceLowerCase: boolean = t
 }
 
 export function GetEntryUrl(data: any): string {
-	return `/Entry/${data.id}?type=${data.type}&galaxy=${data.galaxy}`
+	return `/Entry/${data.id}`
 }
