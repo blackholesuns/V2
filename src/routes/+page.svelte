@@ -1,5 +1,5 @@
 <script>
-	import Entry from '$component/Entries/Entry.svelte';
+	import Entry from '$component/entries/Entry.svelte';
 	import { GetLatestEntries } from '$lib/Firebase/Firestore';
 
 	import('$lib/Environment').then(console.log);
