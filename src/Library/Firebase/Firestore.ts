@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, getDoc, collection, doc, query, collectionGroup, orderBy, limit, getDocs } from "firebase/firestore";
+import { getFirestore, getDoc, doc, query, collectionGroup, orderBy, limit, getDocs } from "firebase/firestore";
 import { Config } from "$lib/Firebase/Config";
 import { CapitalizeFirstLetter } from "$lib/Util";
 
