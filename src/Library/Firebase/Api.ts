@@ -7,12 +7,9 @@ export const DatabaseUri = `${ProjectUri}/databases/(default)`
 export const DocumentsUri = `${DatabaseUri}/documents`
 
 
-export async function GetAPIEntry(type: string, id: string, galaxy = "Euclid") {
+export async function GetAPIEntry(id: string) {
 
-	type = CapitalizeFirstLetter(type.toLowerCase())
-	galaxy = CapitalizeFirstLetter(galaxy.toLowerCase());
-
-	const response = await fetch(`${DocumentsUri}/nmsce/${galaxy}/${type}/${id}`);
+	const response = await fetch(`${DocumentsUri}/nmsceCombined/${id}`);
 	const result = await response.json();
 
 	if(result.error)
