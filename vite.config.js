@@ -11,10 +11,10 @@ export default {
 	},
 	resolve: {
 		alias: {
-			'$component': resolve(__dirname, './src/Components/'),
-			'$lib': resolve(__dirname, './src/Library/'),
-			'$stores': resolve(__dirname, './src/Stores/'),
-			'$assets': resolve(__dirname, './src/Assets/'),
+			'$component': resolve(__dirname, './src/components/'),
+			'$lib': resolve(__dirname, './src/library/'),
+			'$stores': resolve(__dirname, './src/stores/'),
+			'$assets': resolve(__dirname, './src/assets/'),
 		}
 	}
 };

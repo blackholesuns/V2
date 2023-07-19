@@ -12,14 +12,14 @@
 		
 		"baseUrl": ".",
 		"paths": {
-			"$lib": ["src/Library"],
-			"$lib/*": ["src/Library/*"],
-			"$component": ["src/Components"],
-			"$component/*": ["src/Components/*"],
-			"$stores": ["src/Stores"],
-			"$stores/*": ["src/Stores/*"],
-			"$assets": ["src/Assets"],
-			"$assets/*": ["src/Assets/*"]
+			"$lib": ["src/library"],
+			"$lib/*": ["src/library/*"],
+			"$component": ["src/components"],
+			"$component/*": ["src/components/*"],
+			"$stores": ["src/stores"],
+			"$stores/*": ["src/stores/*"],
+			"$assets": ["src/assets"],
+			"$assets/*": ["src/assets/*"]
 		}
 	}
 }
