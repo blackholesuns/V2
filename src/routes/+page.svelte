@@ -18,7 +18,7 @@
 	<p>The latest Iteration</p>
 	<a
 		class="text-indigo-600"
-		href="/Entry/c28cfcaf-a8b0-47c0-8a8f-ba3609da332a?galaxy=euclid&type=Ship">Example Entry</a
+		href="/Entry/c28cfcaf-a8b0-47c0-8a8f-ba3609da332a">Example Entry</a
 	>
 
 	<!-- <div class="flex flex-row flex-wrap w-screen">
