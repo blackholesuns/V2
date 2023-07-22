@@ -4,8 +4,6 @@ import { GetAPIEntry } from '$lib/firebase/api';
 
 export const prerender = false;
 export const ssr = true;
-// export const hydrate = false;
-// export const router = false;
 
 //@ts-ignore
 export async function load({ params, fetch, url }) {

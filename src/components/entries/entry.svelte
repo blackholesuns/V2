@@ -7,7 +7,7 @@
 	const component = mapping.get((data?.type as string)?.toLowerCase());
 
 	if(!component) {
-		throw new Error(`Unable to retrieve Component for DB type ${data?.type}`);
+		console.warn(`Unable to retrieve Component for DB type ${data?.type}`);
 	}
 </script>
 

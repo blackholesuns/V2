@@ -7,6 +7,5 @@
 
 </script>
 
-
-<h1>Error {ErrorCode}</h1>
-<h1>{ErrorMessage}</h1>
+<h1 class="text-center mt-8 font-bold text-6xl">Error {ErrorCode}</h1>
+<h1 class="mt-2 font-semibold text-center">{ErrorMessage}</h1>

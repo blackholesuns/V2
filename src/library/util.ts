@@ -1,3 +1,4 @@
+import { EntryUrl, UserUrl } from "./routes";
 
 export function CapitalizeFirstLetter(value: string, forceLowerCase: boolean = true): string {
 	if(forceLowerCase)
@@ -6,5 +7,9 @@ export function CapitalizeFirstLetter(value: string, forceLowerCase: boolean = t
 }
 
 export function GetEntryUrl(data: any): string {
-	return `/Entry/${data.id}`
+	return `${EntryUrl}/${data.id}`
+}
+
+export function GetUserUrl(data: any): string {
+	return `${UserUrl}/${data.id}`
 }

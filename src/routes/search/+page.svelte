@@ -1,1 +1,2 @@
-<h1>Search</h1>
+<h1 class="text-center text-6xl">Search Page</h1>
+<p class="mt-2 text-center">Under Construction 🚧</p>

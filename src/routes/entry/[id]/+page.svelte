@@ -1,7 +1,5 @@
 <script lang="ts">
-    import { page } from '$app/stores';
-    // const { type, id } = $page.params;
-    
+
     export let data: any;
     const {exists} = data;
 
@@ -10,6 +8,7 @@
     $:imageUrl = `https://cdn.nmsce.com/nmsce/orig/${Photo}`;
     $:title = `NMSCE: ${Name}`
     $:description = `A ${Type} in the ${System} System called ${Name}`
+	
 </script>
 
 <svelte:head>
@@ -30,7 +29,7 @@
         <h1>Sorry The Specified Entry does not exist</h1>
     {:else}
 		<h1 class="text-2xl font-semibold m-3">{Name}</h1>
-		<h1 class="text-lg font-semibold m-2">in {System || "Undefined"}</h1>
-        <img src="{imageUrl}" alt="{imageUrl}">
+		<h1 class="text-lg font-semibold m-2">in the {System || "Undefined"} System</h1>
+        <img loading="lazy" src="{imageUrl}" alt="{imageUrl}">
     {/if}
 </body>
