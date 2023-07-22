@@ -1,8 +1,8 @@
 <script>
-	import Entry from '$component/entries/Entry.svelte';
-	import { GetLatestEntries } from '$lib/Firebase/Firestore';
+	import Entry from '$component/entries/entry.svelte';
+	import { GetLatestEntries } from '$lib/firebase/firestore';
 
-	import('$lib/Environment').then(console.log);
+	import('$lib/environment').then(console.log);
 
 	// // console.log("Querying Documents")
 	const promise = GetLatestEntries();

@@ -1,5 +1,5 @@
 import type { FirebaseOptions } from "firebase/app";
-import { FirebaseAPI, FirebaseAuthDomain, FirebaseDatabaseUrl, FirebaseMessageId, FirebaseProjectId, FirebaseStorageBucket } from "../Environment";
+import { FirebaseAPI, FirebaseAuthDomain, FirebaseDatabaseUrl, FirebaseMessageId, FirebaseProjectId, FirebaseStorageBucket } from "../environment";
 
 export const Config = {
     apiKey: FirebaseAPI,

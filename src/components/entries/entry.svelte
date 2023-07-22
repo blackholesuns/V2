@@ -1,13 +1,15 @@
 <script lang="ts">
-	import Ship from "./Ship.svelte";
+	import { mapping } from "./entrytypes";
+	import Ship from "./ship.svelte";
 
 	export let data: Record<string, unknown>;
-	let component: any = null;
-	switch(data.type) {
-		case "Ship":
-			component = Ship
-		break;
+
+	const component = mapping.get((data?.type as string)?.toLowerCase());
+
+	if(!component) {
+		throw new Error(`Unable to retrieve Component for DB type ${data?.type}`);
 	}
 </script>
 
+<!-- Meta component to substitute DB entities with their respective UI class -->
 <svelte:component this={component} {data}/>

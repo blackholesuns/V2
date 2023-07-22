@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { CapitalizeFirstLetter } from './Util';
+import { CapitalizeFirstLetter } from './util';
 
 
 

@@ -1,12 +1,10 @@
 <script lang="ts">
-	import { GetOriginalImageUrl } from "$lib/CDN/Images";
-	import { GetEntryUrl } from "$lib/Util";
-
+	import { GetOriginalImageUrl } from "$lib/cdn/images";
+	import { GetEntryUrl } from "$lib/util";
 
 	export let data: any;
 
 	const date = (data.created.toDate() as Date);
-	
 </script>
 
 

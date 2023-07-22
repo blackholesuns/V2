@@ -1,6 +1,6 @@
 
 import { error } from '@sveltejs/kit';
-import { GetAPIEntry } from '$lib/Firebase/Api';
+import { GetAPIEntry } from '$lib/firebase/api';
 
 export const prerender = false;
 export const ssr = true;

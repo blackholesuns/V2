@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, getDoc, doc, query, orderBy, limit, getDocs, collection } from "firebase/firestore";
-import { Config } from "$lib/Firebase/Config";
-import { CapitalizeFirstLetter } from "$lib/Util";
+import { Config } from "$lib/firebase/config";
+import { CapitalizeFirstLetter } from "$lib/util";
 
 export const App = initializeApp(Config);
 export const Firestore = getFirestore(App);

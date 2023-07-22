@@ -1,5 +1,5 @@
-import { CapitalizeFirstLetter } from "$lib/Util";
-import { FirebaseProjectId } from "../Environment";
+import { CapitalizeFirstLetter } from "$lib/util";
+import { FirebaseProjectId } from "../environment";
 
 export const BaseUri = "https://firestore.googleapis.com/v1"
 export const ProjectUri = `${BaseUri}/projects/${FirebaseProjectId}`
