@@ -1,8 +1,11 @@
 {
-    "cSpell.words": [
-        "nmsce",
-        "pnpm",
-        "sveltekit",
-        "tailwindcss"
-    ],
+	"cSpell.words": [
+		"nmsce",
+		"pnpm",
+		"sveltekit",
+		"tailwindcss"
+	],
+	"editor.quickSuggestions": {
+		"strings": true
+	}
 }
