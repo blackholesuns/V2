@@ -1,8 +1,14 @@
 <script lang="ts">
 	import { UploadUrl } from '$lib/routes';
 	import Icon from '@iconify/svelte';
+	import { Button } from 'flowbite-svelte';
 </script>
 
+<Button href={UploadUrl} color="green">
+	<Icon class="mr-2" width=24 icon="tabler:upload"/> Upload
+</Button>
+
+<!-- 
 <a class="block bg-green-400 hover:[filter:brightness(0.95)] h-full rounded-xl shadow-md hover:shadow-lg transition-all" href={UploadUrl}>
 	<div class="flex justify-center items-center">
 		<Icon class="m-2" width=24 icon="tabler:upload"/>
@@ -10,4 +16,4 @@
 			Upload
 		</p>
 	</div>
-</a>
+</a> -->

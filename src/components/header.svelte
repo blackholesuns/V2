@@ -11,7 +11,8 @@
 
 	<div class="ml-auto p-3 h-[64px] flex flex-row">
 		<UploadButton/>
-		<div class="mr-2"/>
+		<div class="mr-6"/>
 		<Account/>
+		<div class="mr-4"/>
 	</div>
 </div>
