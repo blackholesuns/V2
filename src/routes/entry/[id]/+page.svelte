@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Table, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell } from 'flowbite-svelte';
+	import { page } from '$app/stores';
     export let data: any;
     const {exists} = data;
 
@@ -20,7 +21,12 @@
     <meta property="og:title" content="{title}">
     <meta property="og:description" content="{description}">
     <meta property="og:image" content="{imageUrl}">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="{$page.url.toString()}">
 
+	<meta name="twitter:card" content="summary_large_image">
+	<meta property="twitter:domain" content="nmsce.com">
+	<meta property="twitter:url" content="{$page.url.toString()}">
     <meta name="twitter:title" content="{title}">
     <meta name="twitter:description" content="{description}">
     <meta name="twitter:image:src" content="{imageUrl}">
